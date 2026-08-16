@@ -1,4 +1,4 @@
 interface:
   display_name: "爆款推文写作"
   short_description: "把文章、主题或已有内容转化为有辨识度且具有传播力的 X 推文"
-  default_prompt: "使用 $viral-tweet-writer，把这篇文章或这个主题改写成有辨识度、具有传播力的 X 推文。"
+  default_prompt: "使用 $viral-tweet-writer（或输入 /huaxa 选择推文形式），把这篇文章或这个主题改写成有辨识度、具有传播力的 X 推文。"
