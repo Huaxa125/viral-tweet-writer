@@ -31,20 +31,29 @@
 
 ## 安装方式
 
+> 本仓库**根目录即 skill 包**（含 `SKILL.md`），因此「克隆到技能目录」即可直接使用，无需再进入子目录复制。
+
 ### 方式一：WorkBuddy 技能市场
 
 在 WorkBuddy 对话中通过一句话从推荐市场搜索并安装 `viral-tweet-writer` 技能即可。
 
-### 方式二：手动放置（通用 / Cline / Claude 等）
-
-把整个 `viral-tweet-writer/` 目录复制到你的技能目录：
+### 方式二：直接克隆到技能目录（推荐）
 
 ```bash
-# WorkBuddy（用户级）
-cp -r viral-tweet-writer ~/.workbuddy/skills/
+# 一条命令：克隆即安装（仓库根就是 skill 包）
+git clone https://github.com/Huaxa125/viral-tweet-writer.git ~/.workbuddy/skills/viral-tweet-writer
+```
+
+### 方式三：手动复制（通用 / Cline / Claude 等）
+
+先把仓库克隆到任意位置，再把**仓库根目录（含 `SKILL.md` 的那一层）**整体复制到技能目录：
+
+```bash
+git clone https://github.com/Huaxa125/viral-tweet-writer.git /tmp/vtw
+cp -r /tmp/vtw ~/.workbuddy/skills/viral-tweet-writer
 
 # 其他兼容 Agent（按各自 skills 目录调整路径）
-cp -r viral-tweet-writer /path/to/your/agent/skills/
+cp -r /tmp/vtw /path/to/your/agent/skills/viral-tweet-writer
 ```
 
 放置后目录结构应如下（参考库必须齐全，否则工作流会缺少依赖）：
